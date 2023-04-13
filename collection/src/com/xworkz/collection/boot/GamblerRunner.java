@@ -11,9 +11,8 @@ public class GamblerRunner {
 			if (ref > 1000) {
 				System.out.println("Gambler is 100");
 			}
-			return 0D;
+			return ref;
 		};
 		GamblerUtil.test(gambler);
 	}
-
 }

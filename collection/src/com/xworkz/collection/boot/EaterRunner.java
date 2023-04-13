@@ -9,8 +9,8 @@ public class EaterRunner {
 			System.out.println("item in upperCase :" + ref1.toUpperCase());
 			System.out.println("item is :" + ref1 + "]   [Quantity is :" + ref2);
 			return null;
-
 		};
 		EaterUtil.test(eater);
 	}
 }
+
