@@ -47,10 +47,18 @@ public class Emails {
 		System.out.println("Emails with gmails............");
 		emails.stream().filter(ele -> ele.endsWith("gmail.com")).collect(Collectors.toList())
 				.forEach(e -> System.out.println(e));
-        
+
 		System.out.println("printing emails which is not gmail & xworkz.........");
 		emails.stream().filter(ele -> !ele.endsWith("xworkz.com") && !ele.endsWith("gmail.com"))
 				.collect(Collectors.toList()).forEach(e -> System.out.println(e));
+		System.out.println("Unique domain Only......");
+		emails.stream().map(ele->ele.split("@")).collect(Collectors.toList()).forEach(e->System.out.println(e[1]));
+
+		System.out.println("Without domainm...");
+		// it means After @ gmail.com is call as domain
+
+		emails.stream().map(ele -> ele.split("@")).collect(Collectors.toList()).
+		forEach(e -> System.out.println(e[0]));
 	}
 
 }
