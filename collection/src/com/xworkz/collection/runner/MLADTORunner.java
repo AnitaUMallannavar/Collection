@@ -259,9 +259,11 @@ public class MLADTORunner {
 		System.out.println("All Female MLAs...........");
 		mLADTOs.stream().filter(ele -> ele.getGender().endsWith("Female")).collect(Collectors.toList())
 				.forEach(e -> System.out.println(e.getName() + "][ " + e.getGender()));
+		
 		System.out.println("Sorting party in Ascending Order........");
 		mLADTOs.stream().map(e -> e.getParty()).collect(Collectors.toSet()).stream().sorted()
 				.forEach(e -> System.out.println(e));
+		
 		System.out.println("Sorting names in  Ascending Order...........");
 		mLADTOs.stream().sorted((ref1, ref2) -> ref1.getName().compareTo(ref2.getName())).collect(Collectors.toList())
 				.forEach(e -> System.out.println(e));
@@ -277,12 +279,12 @@ public class MLADTORunner {
 		System.out.println("Finding unique Parties.............");
 		mLADTOs.stream().map(e -> e.getParty()).collect(Collectors.toSet()).forEach(e -> System.out.println(e));
 
-		System.out.println("Finding all independent MLAs");
+		System.out.println("Finding all independent MLAs..........");
 
 		mLADTOs.stream().filter(e -> e.isIndependent()).collect(Collectors.toList())
 				.forEach(ml -> System.out.println(ml.getName()));
 
-		System.out.println("Finding All mla age>50 & party is BJP");
+		System.out.println("Finding All mla age>50 & party is BJP.............");
 
 		mLADTOs.stream().filter(ele -> ele.getAge() > 50 && ele.getParty().equals("Bharatiya Janata Party"))
 				.collect(Collectors.toList()).forEach(m -> System.out.println(m.getName()));
